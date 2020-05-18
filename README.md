@@ -19,4 +19,4 @@ That is my learning repository when I want to document my progress in programmin
 Project is: _in progress_
 
 ## Contact
-Created by [@heniu1985](https://github.com/heniu1985/learning) - feel free to contact me!
+Created by [@heniu1985](https://github.com/heniu1985) - feel free to contact me!
