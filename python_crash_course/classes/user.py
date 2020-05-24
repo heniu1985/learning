@@ -32,23 +32,30 @@ class User():
         """Wyświetla liczbę prób logowania"""
         print(f"{self.login_attempts} prób logowania.")
 
+class Privileges():
+    """Klasa opisująca uprawnienia użytkowników"""
+
+    def __init__(self, privileges=["może dodać post", "może usunąć post", "może zbanować użytkownika"]):
+        """Inicjalizacja atrybutów uprawnień"""
+        self.privileges = privileges
+
+    def show_privileges(self):
+        """Wyświetla uprawnienia Administratora"""
+        print(f"Użytkownik jest Administratorem i posiada następujące uprawnienia:")
+        for privilege in self.privileges:
+            print(f"- {privilege.capitalize()}")
+
+class Admin(User):
+    """Klasa opisująca administratora (dziedzicząca po klasie User)"""
+
+    def __init__(self, first_name, last_name, email, country, city):
+        """Inicjalizacja atrybutów opisujących Administratora"""
+        super().__init__(first_name, last_name, email, country, city)
+        self.privileges = Privileges()
+
 user1 = User("Piotr", "Kowalski", "pkowalski@gmail.com", "Polska", "Rzeszów")
 user2 = User("Damian", "Hennek", "hennek@gmail.com", "Polska", "Katowice")
 user3 = User("John", "Kowalsky", "john.kowalsky@yahoo.com", "usa", "new")
+user4 = Admin("Jan", "Nowak", "jan.nowak@wp.pl", "Polska", "wrocław")
 
-# user1.greet_user()
-# user1.describe_user()
-
-# user2.greet_user()
-# user2.describe_user()
-
-# user3.greet_user()
-# user3.describe_user()
-
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.show_login_attempts()
-user1.reset_login_attempts()
-user1.show_login_attempts()
+user4.privileges.show_privileges()

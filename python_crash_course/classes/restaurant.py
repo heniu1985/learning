@@ -33,21 +33,24 @@ class Restaurant():
         """Wyświetla liczbę obsłużonych klientów"""
         print(f'W restauracji "{self.name.title()}" zostało obsłużonych {self.number_served} klientów.')
 
-la_cantina = Restaurant("la cantina", "kuchnia śródziemnomorska")
-batman = Restaurant("u batmana", "pizzeria")
-pod_lipami = Restaurant("pod lipami", "kuchnia polska")
+class IceCreamStand(Restaurant):
+    """Pod klasa (klasa dziedzicząca) klasy Restaurant stowrzona by wymodelować budkę z lodami"""
 
-# la_cantina.describe_restaurant()
-# batman.describe_restaurant()
-# pod_lipami.describe_restaurant()
+    def __init__(self, restaurant_name, cusisine_type):
+        """Przedstawia cechy charakterystyczne budki z lodami"""
+        super().__init__(restaurant_name, cusisine_type)
+        self.flavors = ["Jagodowy", "Czekoladowy", "Mango", "Nutella"]
 
-# batman.set_number_served(23)
-# batman.show_number_served()
+    def show_flavors(self):
+        """Wyświetla wszystkie dostępne smaki lodów"""
+        print("Dostępne smaki lodów:")
+        for flavor in self.flavors:
+            print(f"- {flavor}")
 
-batman.show_number_served()
-batman.increment_number_served(2)
-batman.show_number_served()
-batman.increment_number_served(4)
-batman.increment_number_served(5)
-batman.increment_number_served(9)
-batman.show_number_served()
+restaurant1 = Restaurant("la cantina", "kuchnia śródziemnomorska")
+restaurant2 = Restaurant("u batmana", "pizzeria")
+restaurant3 = Restaurant("pod lipami", "kuchnia polska")
+ice_cream_stand1 = IceCreamStand("Lodzio", "Budka z lodami")
+
+ice_cream_stand1.describe_restaurant()
+ice_cream_stand1.show_flavors()
