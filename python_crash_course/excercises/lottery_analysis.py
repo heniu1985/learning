@@ -19,8 +19,8 @@ while True:
     if sorted(draw) != my_ticket:
         l += 1
         draw = []
-        jackpot_copy = jackpot[:]        
-    else:        
+        jackpot_copy = jackpot[:]
+    else:
         print("Wygrałeś")
         print(f"Potrzebowałeś do tego {l} losowań.")
         break
