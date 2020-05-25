@@ -1,17 +1,30 @@
 def file_not_found():
+    """
+    Wyświetla komunikat o braku pliku
+    Show info about missing file
+    """
     print("\nNie ma takiego pliku")
 
 def main_path():
-    """Śceżka do folderu z plikami"""
+    """
+    Śceżka do folderu z plikami
+    Path to folder with files
+    """
     return "python_crash_course/files/"
 
 def file_path(filename):
-    """Utworzenie ścieżki do pliku"""
+    """
+    Utworzenie ścieżki do pliku
+    Create path to file
+    """
     file_path = main_path() + filename
     return file_path
 
 def file_read(file_path):
-    """Wczytanie pliku"""
+    """
+    Wczytanie pliku
+    Load file
+    """
     try:
         with open(file_path) as file_object:
             content = file_object.read()
@@ -21,7 +34,10 @@ def file_read(file_path):
         return content
 
 def count_words(content, filename):
-    """Obliczanie liczby słów w podanym pliku tekstowym"""
+    """
+    Obliczanie liczby słów w podanym pliku tekstowym
+    Counts number of words in a file content
+    """
     try:
         content = content.split()
         num_words = len(content)
@@ -30,12 +46,18 @@ def count_words(content, filename):
         pass
 
 def word_number(word, content):
-    """Obliczanie ile powtórzeń danego słowa jest w danym pliku tekstowym"""
+    """
+    Obliczanie ile powtórzeń danego słowa jest w danym pliku tekstowym
+    Couts how many times word is repeated in file content
+    """
     number = content.lower().count(word)
-    print(f"W pliku znajdujes się {number} słów {word}")
+    print(f"W pliku znajduje się {number} słów {word}")
 
 def action():
-    """Główny program"""
+    """
+    Główny program
+    Main programm
+    """
     print("Witaj!")
     while True:
         print("\nWciśnij 1 aby obliczyć ile jest słów w danym pliku.")
