@@ -1,4 +1,4 @@
-file_path = "/home/heniu/Programowanie/Nauka/Python/learning/python_crash_course/files/learning_python.txt"
+file_path = "python_crash_course/files/learning_python.txt"
 
 # Odczyt całego pliku
 print("\nPrzykład pierwszy")
