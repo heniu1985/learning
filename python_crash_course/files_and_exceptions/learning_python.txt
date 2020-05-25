@@ -1,0 +1,5 @@
+
+W Pythonie można używać klas.
+W Pythonie można używać funkcji.
+W Pythonie można pisać proste skrypty.
+W Pythonie można pisać złożone programy.
