@@ -53,7 +53,7 @@ def word_number(word, content):
     number = content.lower().count(word)
     print(f"W pliku znajduje się {number} słów {word}")
 
-def action():
+def main():
     """
     Główny program
     Main programm
@@ -69,13 +69,15 @@ def action():
         if choice == "1":
                 filename = input("Podaj nazwę pliku wraz z rozszerzeniem '.txt': ")
                 content = file_read(file_path(filename))
+                if content == None:
+                    continue
                 count_words(content, filename)
         if choice == "2":
                 filename = input("Podaj nazwę pliku wraz z rozszerzeniem '.txt': ")
                 content = file_read(file_path(filename))
+                if content == None:
+                    continue
                 word = input("Podaj słowo, którego powtórzenia chcesz obliczyć: ")
                 word_number(word, content)
-        if choice != "1" or choice != "2":
-            continue
 
-action()
+main()
