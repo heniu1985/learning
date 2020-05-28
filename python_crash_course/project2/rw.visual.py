@@ -16,7 +16,7 @@ while True:
 
     # Podkreślenie pierwszego i ostatniego punktu błądzenia losowego.
     ax.scatter(0, 0, c="green", edgecolor="none", s=25)
-    ax.scatter(rw.x_values[-1], rw.y_values[-1], c="red", edgecolor="none", s=25)
+    ax.scatter(rw.x_values[-1], rw.y_values[-1], c="red", edgecolor="none", s=15)
 
     # Ukrycie osi.
     ax.get_xaxis().set_visible(False)
