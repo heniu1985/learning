@@ -5,9 +5,9 @@ FILE_PATH = "python_crash_course/project2/squares_plot.png"
 x_values = range(1, 1001)
 y_values = [x**2 for x in x_values]
 
-plt.style.use("fivethirtyeight")
+plt.style.use("classic")
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, c="Green", s=10)
+ax.scatter(x_values, y_values, c="green", s=10)
 
 # Zdefiniowanie tytułu wykresu i etykiet osi
 ax.set_title("Kwadraty liczb", fontsize=25)

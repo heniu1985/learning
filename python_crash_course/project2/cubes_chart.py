@@ -5,7 +5,7 @@ FILE_PATH = "python_crash_course/project2/cubes_plot.png"
 x_values = range(1, 5001)
 y_values = [x ** 3 for x in x_values]
 
-plt.style.use("seaborn")
+plt.style.use("classic")
 fig, ax = plt.subplots()
 ax.plot(x_values, y_values, c="Green", linewidth=1)
 
