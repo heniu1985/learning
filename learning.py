@@ -11,7 +11,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-import indicators
+# import indicators
 
 # def symbols_file_path():
 #     """Function download file with instruments symbol
