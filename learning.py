@@ -100,14 +100,19 @@ import matplotlib.pyplot as plt
     Tworzenie wykresu
 """
 
-# # plt.figure(figsize=[15,10])
-# # plt.grid(True)
-# # plt.plot(df["Zamkniecie"], label="close")
-# # plt.plot(df["MA_30"], label="MA_30")
-# # plt.plot(df["EMA_30"], label="EMA_30")
-# # plt.legend(loc=2)
+# plt.figure(figsize=[15,10])
+# plt.grid(True)
+# plt.plot(df["<CLOSE>"], label="CLOSE")
+# plt.plot(df["MA"], label="MA")
+# plt.plot(df["EMA"], label="EMA")
+# plt.legend(loc=2)
+# plt.figure(figsize=[10,5])
+# plt.grid(True)
+# plt.plot(df["TSI"], label="TSI")
+# plt.plot(df["TSI_MA"], label="TSI_MA")
+# plt.legend(loc=2)
 
-# # plt.show()
+# plt.show()
 
 """
     Zmiana nazw plików
@@ -148,3 +153,15 @@ import matplotlib.pyplot as plt
 #         datas_dict.append(line)
 
 # print(datas_dict)
+
+"""
+    Pandas DataFrame
+"""
+
+# filename = DATA_PATH + "cig.csv"
+# df = csv_to_df(filename)
+# df = indicators.moving_average(df)
+# df = indicators.exponential_moving_average(df)
+# df = indicators.rsi(df)
+# df = indicators.tsi(df)
+# df = indicators.tsi_moving_average(df)
